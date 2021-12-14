@@ -8,7 +8,7 @@
 # (or at least out of _this_ git repo).
 data/
 results/
-auspice/
+#auspice/
 build/
 
 # Sensitive environment variables
