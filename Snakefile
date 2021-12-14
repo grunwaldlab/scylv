@@ -1,6 +1,6 @@
 rule all:
     input:
-        auspice_json = "auspice/zika.json",
+        auspice_json = "auspice/scylv.json",
 
 input_fasta = "data/sequences.fasta",
 input_metadata = "data/metadata.tsv",
@@ -44,7 +44,7 @@ rule filter:
     params:
         group_by = "country year month",
         sequences_per_group = 20,
-        min_date = 1990
+        min_date = 1960
     shell:
         """
         augur filter \

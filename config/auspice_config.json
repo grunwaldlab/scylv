@@ -5,7 +5,7 @@
     {"name": "Zachary Foster"},
     {"name": "Niklaus Grunwald"}
   ],
-  "build_url": "https://github.com/grunwaldlab/scylv_nextstrain",
+  "build_url": "https://github.com/grunwaldlab/scylv",
   "colorings": [
     {
       "key": "gt",
