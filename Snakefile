@@ -44,7 +44,7 @@ rule filter:
     params:
         group_by = "country year month",
         sequences_per_group = 20,
-        min_date = 2012
+        min_date = 1990
     shell:
         """
         augur filter \
@@ -169,7 +169,7 @@ rule traits:
     output:
         node_data = "results/traits.json",
     params:
-        columns = "region country"
+        columns = "country"
     shell:
         """
         augur traits \
