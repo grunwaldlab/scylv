@@ -33,8 +33,7 @@
   ],
   "panels": [
      "tree",
-     "map",
-     "entropy"
+     "map"
   ],
   "display_defaults": {
     "map_triplicate": true,

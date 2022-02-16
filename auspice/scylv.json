@@ -240,8 +240,7 @@
     ],
     "panels": [
       "tree",
-      "map",
-      "entropy"
+      "map"
     ],
     "title": "Sugarcane yellow leaf virus",
     "updated": "2022-02-16"
