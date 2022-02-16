@@ -30,8 +30,6 @@ rule filter:
     message:
         """
         Filtering to
-          - {params.sequences_per_group} sequence(s) per {params.group_by!s}
-          - from {params.min_date} onwards
           - excluding strains in {input.exclude}
         """
     input:
@@ -41,10 +39,6 @@ rule filter:
         exclude = dropped_strains
     output:
         sequences = "results/filtered.fasta"
-    params:
-        group_by = "country year month",
-        sequences_per_group = 20,
-        min_date = 1960
     shell:
         """
         augur filter \
@@ -52,10 +46,7 @@ rule filter:
             --sequence-index {input.sequence_index} \
             --metadata {input.metadata} \
             --exclude {input.exclude} \
-            --output {output.sequences} \
-            --group-by {params.group_by} \
-            --sequences-per-group {params.sequences_per_group} \
-            --min-date {params.min_date}
+            --output {output.sequences}
         """
 
 rule align:
@@ -110,7 +101,7 @@ rule refine:
     params:
         coalescent = "opt",
         date_inference = "marginal",
-        clock_filter_iqd = 4
+        clock_filter_iqd = 10
     shell:
         """
         augur refine \

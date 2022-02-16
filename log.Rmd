@@ -10,6 +10,21 @@ clipr::write_clip(paste0('## ', format(Sys.time(), "%F (%A %B %e)\n\n")))
 ```
 
 
-### 
+## 2022-02-15 (Tuesday Feburary 15)
 
-select new outgroup
+Looking for why samples are being filtered out.
+Happens at `refine` step, due to the option `--clock-filter-iqd`.
+Increasing the value stops the samples from being removed, but removing the option causes an error.
+
+## 2021-12-16 (Thursday December 16)
+
+Got it working yesterday.
+Problem with overlapping ORFs
+Nik says:
+
+Zach, check if you can have overlapping ORFs as in nextstrain following this genome annotation:
+
+Fig. 2
+
+See: https://www.sciencedirect.com/science/article/pii/S0882401018305953?via%3Dihub
+
