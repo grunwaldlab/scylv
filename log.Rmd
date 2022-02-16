@@ -9,6 +9,10 @@ knitr::opts_chunk$set(echo = TRUE)
 clipr::write_clip(paste0('## ', format(Sys.time(), "%F (%A %B %e)\n\n")))
 ```
 
+## 2022-02-16 (Wednesday February 16)
+
+Can add a description file with arbitrary md/html with `export` option `--description`.
+Can include images with `cat(sprintf("<img src=\"%s\" />\n", knitr::image_uri("test.jpeg")))` and other     `knitr` tools II expect
 
 ## 2022-02-15 (Tuesday Feburary 15)
 
