@@ -4,7 +4,7 @@ library(viridis)
 library(CoordinateCleaner)
 
 metadata <- readxl::read_xlsx(file.path("data", "SCYLV metadata.xlsx"))
-names(metadata) <- c("isolate", "virus", "country", "host", "date", "rna_extraction_year", "authors", "accession")
+names(metadata) <- c("isolate", "virus", "country", "host", "collection_date", "date", "authors", "accession")
 metadata <- metadata %>%
   select(strain = accession, virus, accession, date, country, authors)
 # Example data set cols: strain	virus	accession	date	region	country	division	city	db	segment	authors	url	title	journal	paper_url

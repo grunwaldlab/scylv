@@ -1,6 +1,6 @@
 rule all:
     input:
-        auspice_json = "auspice/scylv.json",
+        auspice_json = "auspice/scylv.json"
 
 input_fasta = "data/sequences.fasta",
 input_metadata = "data/metadata.tsv",
@@ -9,6 +9,7 @@ reference = "config/reference.gb",
 colors = "config/colors.tsv",
 lat_longs = "config/lat_longs.tsv",
 auspice_config = "config/auspice_config.json"
+description = "config/description.md"
 
 rule index_sequences:
     message:
@@ -194,6 +195,7 @@ rule export:
             --colors {input.colors} \
             --lat-longs {input.lat_longs} \
             --auspice-config {input.auspice_config} \
+            --description {description} \
             --output {output.auspice_json}
         """
 
