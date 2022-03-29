@@ -3,5 +3,5 @@ output: md_document
 ---
 
 ```{r results='asis', echo=FALSE}
-cat(sprintf('<img src="%s" alt="Gene annotations" height="600"/>\n', knitr::image_uri("gene_annotations.png")))
+cat(sprintf('<img src="%s" alt="Gene annotations" width="100%"/>\n', knitr::image_uri("gene_annotations.png")))
 ```
