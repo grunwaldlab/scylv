@@ -9,6 +9,12 @@ knitr::opts_chunk$set(echo = TRUE)
 clipr::write_clip(paste0('## ', format(Sys.time(), "%F (%A %B %e)\n\n")))
 ```
 
+## 2022-03-29 (Tuesday March 29)
+
+You can build just certain steps with something like: 
+
+`nextstrain build . export -f`
+
 ## 2022-02-16 (Wednesday February 16)
 
 Can add a description file with arbitrary md/html with `export` option `--description`.
