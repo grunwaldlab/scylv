@@ -1,0 +1,16 @@
+---
+output: html_document
+bibliography: "`r sharedbib::bib_path()`"
+---
+
+## Nextstrain methods
+
+An interactive web-based visualization of SCYLV genomes was made using the Nextstrain pipeline [@hadfield2018nextstrain].
+The main steps of the pipeline are summarized here.
+A multiple sequence alignment of the genomes was made using `mafft` v7.475 with the FFT-NS-2 method [@katoh2005mafft].
+A maximum likelihood tree was inferred from the multiple sequence alignment using `iqtree` v2.1.2 [@minh2020iq]
+The `augur refine` command was used to create a timetree by estimating a molecular clock and rerooting the maximum likelihood tree using TreeTime v0.8.5 [@sagulenko2018treetime].
+Tips of the tree were removed if their divergence vs. time correlation deviated more than 10 times the interquartile range of all samples.
+Ancestral sequences and geographic locations were inferred using the `augur ancestral` and `augur traits` commands respectively.
+The results of the pipeline were visualized using `auspice` [@hadfield2018nextstrain].
+The code for the analysis is available at https://github.com/grunwaldlab/scylv and the interactive output of is hosted at https://nextstrain.org/community/grunwaldlab/scylv.
