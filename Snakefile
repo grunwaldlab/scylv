@@ -111,7 +111,6 @@ rule refine:
             --metadata {input.metadata} \
             --output-tree {output.tree} \
             --output-node-data {output.node_data} \
-            --timetree \
             --coalescent {params.coalescent} \
             --date-confidence \
             --date-inference {params.date_inference} \
